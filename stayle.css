@@ -1,0 +1,507 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+:root{
+    --body-color :  #002025;
+    --button-color: orange;
+    --main-color :  #f8f8f839;
+    --input-text:#bbf596;
+}
+body{ 
+    background-color: #1c2742;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+    
+   
+}
+.mainwrap{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+.main{
+    background-color: #92838339;
+    max-width: 89%;
+    backdrop-filter: blur(7px);
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow-x: hidden;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    left: 4.9%;
+    top: 5%;
+    border-radius: 10px;
+    margin-right: 10%;
+    transition: 0.6s;
+    overflow-y: scroll;
+    
+}
+.head{
+    
+    color: aliceblue;
+    font-size: 20px;
+    background-color: #e7761f;
+    width: 50%;
+    height: 93%;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+  border-radius: 5px;
+  font-size: 65%;
+}
+.brand{
+    color: #ff0000;
+  height: 100%;
+  background-color: black;
+ width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  font-size: 70%;
+
+}
+.inputfeild{
+    position: absolute;
+    top: 90px;
+    width: 85%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+
+}
+.li{
+    
+    margin-left: 7%;
+    background-color:#23f08a38; /* #007d53 */
+    width: 85%;
+    min-height: 50px;
+    max-height: 100px;
+    height:auto;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: #ffffff;
+    list-style: none;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px black;
+    padding: 5px 5px 5px 0px;
+    transition: 0.9s;
+    font-weight: 700;
+    position: relative;
+    
+    
+    
+    
+}
+.input{
+    border-radius: 1ch;
+    border: none;
+    outline: none;
+    padding: 20px;
+    width: 75%;
+    font-size: 80%;
+    transition: 0.5s ;
+
+    
+} 
+.add{
+    width: 80px;
+    background-color: #ff8000;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 5px 3px 10px black;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+.list{
+    position:absolute;
+    top: 170px;
+    width: 100%;
+    
+    display: flex;
+    
+    flex-direction: column;
+}
+.input:hover{
+    box-shadow: 5px 5px 10px black,
+    inset -2px 2px white;
+}
+.plus{
+    width: 70px;
+    height: 68px;
+    background-color: #e26f17;
+   
+   cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 600;
+    border-radius: 50%;
+    color: #ffffff;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    right: 13%;
+    transition: 1.4s;
+
+
+}
+.hbox{
+    background-color: #000000;
+  height: 35px;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: center;
+align-items: center;
+margin-top: 24px;
+  border-radius: 10px;
+
+    
+
+}
+.chek{
+    justify-self: baseline;
+    height:23px;
+    width: 23px;
+    border-radius: 6px;
+    position: absolute;
+     appearance: none;
+     left: 5%;
+   cursor: pointer;
+    border: 3px solid #00d4c9;
+   transition: 0.1s;
+   background-color: #ea1c1c25;
+   
+}
+.chek:checked + label::before {
+    background-color: #958989;
+    width: 20px;
+    height: 20px;
+    content: '\2713'; /* Unicode checkmark character */
+    font-size: 30px;
+    color: #01f2ff;
+    display: block;
+    position: relative;
+    top: -19px;
+    left: -14px;
+    border-radius: 2px;
+    transform: translate(50%,50%);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+   
+}
+
+
+.liremove{
+       transform: translate(150%,0);
+       opacity: 0;
+    
+       
+}
+.p{  width: 80%;
+    
+    height: auto;
+    
+
+
+}
+p{  
+    width: 80%;
+    text-overflow: clip;
+    font-size: 16px;
+    overflow-y: scroll;
+    position: relative;
+    left: 7%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+
+
+}
+.advanceTask{
+ width: 100vw;
+height: 90vh;
+
+position: absolute;
+top: 18; 
+transform: translate(110%,0);
+/* transition: 0.3s;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center; */
+transition: 0.6s;
+
+
+}
+.show{
+    transform: translate(0,0);
+
+}
+.plushide{
+    display: none;
+    transition: 1.6s;
+}
+.input-advance{
+    border: none;
+    position: absolute;
+    top:  120px;
+
+    height: 30px;
+    width: 80%;
+    border-bottom: 5px solid #00ae91;
+    background: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 12px 10px 0px 14px;
+    filter: drop-shadow(10px,5px 10px black);
+
+
+
+}
+.wrap{
+    height: auto;
+    width: 98%;
+    background-color: #0bf1e609;
+    position: absolute;
+    top: 240px;
+    display:flex;
+    justify-content: center;
+    
+    flex-direction: row;
+}
+.wrap2{
+    height: auto;
+    width: 98%;
+    background-color: #0bf1e609;
+    position: absolute;
+    top: 240px;
+    display:flex;
+    justify-content: center;
+    top: 340px;
+    flex-direction: row;
+}
+.lebel{
+    color: rgb(113, 109, 109);
+    position: absolute;
+    bottom: 10px;
+    left: 7%;
+
+}
+.datewraper{
+    width: 98%;
+    background-color: #0bf1e609;
+    position: absolute;
+
+    display:flex;
+    justify-content: center;
+    gap: 22px;
+    flex-direction: row;
+
+}
+.timewraper{
+    width: 98%;
+    background-color: #00d4c900;
+    position: absolute;
+    
+    display:flex;
+    justify-content: center;
+    gap: 22px;
+
+
+
+}
+
+.hours{
+    
+    background: none;
+    color: var(--input-text);
+    border: none;
+    width: 25%;
+    height: 30px;
+    border-bottom: 3px solid #00ae91;
+
+    padding-left: 10px;
+    font-weight: 700;
+}
+option{
+    color: #00d4c9;
+}
+
+.logo{
+    position: absolute;
+    height: 370px;
+    z-index: -1;
+    position: fixed;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    margin-right: 1.1%;
+    opacity: 0.3;
+    top: 26vh;
+    
+}
+.notificationdelails{
+
+
+    width: 95%;
+    position: absolute;
+    top: 390px;
+    display: flex;
+    justify-content: baseline;
+    align-content: baseline;
+    color: #ffffff;
+
+
+}
+.texts{
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 1px;
+    width: 100%;
+    color: #ffffff;
+
+    
+}
+/* .inputdate{
+   background: none;
+    color: #ebf8f7;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    width: 29%;
+    font-size: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 27px;
+    border-bottom: 3px solid #00ae91;
+
+} */
+  /* in here i wrote all off clas which is never exist on main html. 
+  Javascript will make all off this by the user order */
+.date{ color: #dcfbf6;
+    align-self: flex-end;
+    position: absolute;
+    right: 17%;
+    font-size: 7px; /* 7 */
+    background-color: rgba(14, 14, 14, 0.473);
+     bottom: 5%;
+     padding: 3px;
+     border-radius: 5px;
+    backdrop-filter: blur(70px);
+    font-weight: 900;
+    filter: drop-shadow(1px 1px 4px #00ccff);
+    
+}
+.time{
+    color: #c5fac8;
+    align-self: flex-end;
+    position: absolute;
+    right: 3%;
+    font-size: 7px;
+    background-color: rgba(14, 14, 14, 0.473);
+     bottom: 5%;
+     padding: 3px;
+     border-radius: 5px;
+    backdrop-filter: blur(70px);
+    font-weight: 900;
+    filter: drop-shadow(1px 1px 4px #00ccff);
+}
+/* unreal elements end */
+.dbtn{
+    height: 60px;
+    width: 60px;
+    
+}
+.backbtn{
+    position: absolute;
+    left: 5px;
+    width: 60px;
+    height: 50px;
+}
+
+
+
+.hidemain{
+    transform: translate(-130%,0%);
+}
+.over{
+    background-color: #f5546f45;
+}
+.responsive{
+    color: wheat;
+    height: 100vh;
+    width: 100vw;
+    background-color: #48e7bd90;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    backdrop-filter: blur(300px);
+    display: none;
+    position: relative;
+    
+
+    
+
+  }
+  .res{
+    position: absolute;
+    top: 10%;
+    max-width: 70%;
+   
+    left: 20%;
+    
+
+  }
+  .s{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    
+  }
+
+@media only screen and (min-width: 460px){
+    .responsive{
+       
+          display: block;
+          align-items: center;
+          align-content: center;
+    }
+    
+    
+    .main{
+        display: none;
+    }
+}
+
+
