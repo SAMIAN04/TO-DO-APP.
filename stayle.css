@@ -26,12 +26,13 @@ body{
     height: 100vh;
     width: 100%;
     position: fixed;
+    background-color: rgba(255, 0, 0, 0.016);
 }
 .main{
     background-color: #92838339;
     max-width: 89%;
     backdrop-filter: blur(7px);
-    height:90vh;
+    height:80%;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -102,7 +103,7 @@ body{
     justify-content: center;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px black;
-    padding: 5px 5px 5px 0px;
+    padding: 2px 2px 2px 0px;
     transition: 0.9s;
     font-weight: 700;
     position: relative;
@@ -148,22 +149,22 @@ body{
     inset -2px 2px white;
 }
 .plus{
-    width: 70px;
-    height: 68px;
+    width: 50px;
+    height: 48px;
     background-color: #e26f17;
    
    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 500;
     border-radius: 50%;
     color: #ffffff;
     border: none;
     position: absolute;
     z-index: 1;
-    bottom: 10%;
+    bottom: 20%;
     right: 13%;
     transition: 1.4s;
 
@@ -236,7 +237,7 @@ margin-top: 24px;
 p{  
     width: 80%;
     text-overflow: clip;
-    font-size: 16px;
+    font-size: 14px;
     overflow-y: scroll;
     position: relative;
     left: 7%;
@@ -248,7 +249,7 @@ p{
 }
 .advanceTask{
  width: 100vw;
-height: 90vh;
+height: 80vh;
 
 position: absolute;
 top: 18; 
@@ -352,6 +353,7 @@ transition: 0.6s;
 
     padding-left: 10px;
     font-weight: 700;
+    font-size: 10px;
 }
 option{
     color: #00d4c9;
@@ -438,8 +440,8 @@ option{
 }
 /* unreal elements end */
 .dbtn{
-    height: 60px;
-    width: 60px;
+    height: 20px;
+    width: 20px;
     
 }
 .backbtn{
