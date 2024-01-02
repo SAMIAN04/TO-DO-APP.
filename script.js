@@ -20,7 +20,7 @@ function initialize() {
     inputyear.innerHTML += `<option value="${ new Date().getFullYear()}" >${new Date().getFullYear()}</option>`;
     inputyear.innerHTML += `<option value="${ new Date().getFullYear()+1}" >${new Date().getFullYear()+1}</option>`
 
-    console.log(Notification.permission );
+    
     
     // Options for date and time formatting
     const options = {
@@ -72,7 +72,14 @@ function initialize() {
           if (`Notification` in window && Notification.permission === 'default' ) {
             Notification.requestPermission()
           }
-       
+          else if ( Notification.permission === `denied`) {
+            Notification.requestPermission()
+            alert(`You blocked notification from TO DO that's why you can't access this feature`)
+            alert(`Go to setting and allow notification for access this feature`)  
+        }
+           else if (Notification.permission === `default`) {
+            Notification.requestPermission()
+           }
         else{
             advanceTaskSection.classList.add('show');
             mainSection.classList.add('hidemain');
@@ -108,8 +115,8 @@ function initialize() {
                 let etime = getTime().etime
                 let eminute = getTime().minute
                 let esecond = getTime().second
-                let date = getTime().date
-                let month = getTime().month
+                let date = getTime().date <= 9 ?`0`+ getTime().date : getTime().date
+                let month = getTime().month <= 9 ?`0`+ getTime().month: getTime().month
                 let year = getTime().year
                 let fulldate = `${date}/${month}/${year}`
            
@@ -130,8 +137,8 @@ function initialize() {
           else if ( taskdate < fulldate && taskTime <= etime && task.childNodes.length == 11 ){
             task.classList.add(`over`)
           }
+     
          })
-        
          }, 500);
       
    
@@ -140,7 +147,7 @@ function initialize() {
         mainSection.classList.remove('hidemain');
         setTimeout(() => {
             plusButton.classList.remove(`plushide`)
-        }, 1000);
+        }, 850);
         
        
         

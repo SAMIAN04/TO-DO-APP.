@@ -504,6 +504,9 @@ option{
     .main{
         display: none;
     }
+    .plus{
+        display: none;
+    }
 }
 
 
