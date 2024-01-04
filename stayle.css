@@ -569,7 +569,7 @@ option{
     -ms-flex-item-align: end;
         align-self: flex-end;
     position: absolute;
-    right: 17%;
+    right: 20%;
     font-size: 7px; /* 7 */
     background-color: rgba(14, 14, 14, 0.473);
      bottom: 5%;

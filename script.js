@@ -65,25 +65,28 @@
     }
 
     function showAdvanceTask() {
-          if (`Notification` in window && Notification.permission === 'default' ) {
-            Notification.requestPermission()
-          }
-          else if ( Notification.permission === `denied`) {
-            Notification.requestPermission()
-            alert(`You blocked notification from TO DO that's why you can't access this feature`)
-            alert(`Go to setting and allow notification for access this feature`)  
+        if ('Notification' in window) {
+            if (Notification.permission === 'default') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        advanceTaskSection.classList.add('show');
+                        mainSection.classList.add('hidemain');
+                        plusButton.classList.add('plushide');
+                    } else {
+                        alert("You blocked notifications. Please allow notifications in your browser settings.");
+                    }
+                });
+            } else if (Notification.permission === 'denied') {
+                alert("You blocked notifications. Please allow notifications in your browser settings.");
+            } else {
+                advanceTaskSection.classList.add('show');
+                mainSection.classList.add('hidemain');
+                plusButton.classList.add('plushide');
+            }
+        } else {
+            alert("  Sorry to say that you can't access this feature because Notifications are not supported in your browser.");
         }
-           else if (Notification.permission === `default`) {
-            Notification.requestPermission()
-           }
-        else{
-            advanceTaskSection.classList.add('show');
-            mainSection.classList.add('hidemain');
-           plusButton.classList.add(`plushide`)
-        }
-            
     }
-
     function addAdvanceTask() {
         if (inputAdvance.value === '') {
             alert('Please write your task before adding.');
