@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -12,8 +19,12 @@
 }
 body{ 
     background-color: #1c2742;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     justify-items: center;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -31,19 +42,30 @@ body{
 .main{
     background-color: #92838339;
     max-width: 89%;
-    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+            backdrop-filter: blur(7px);
     height:80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90%;
     overflow-x: hidden;
-    align-content: center;
-    align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     left: 4.9%;
     top: 5%;
     border-radius: 10px;
     margin-right: 10%;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
     overflow-y: scroll;
     
@@ -55,9 +77,15 @@ body{
     background-color: #e7761f;
     width: 49.9%;
     height: 99%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-   justify-content: center;
-    align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   border-radius: 5px;
   font-size: 65%;
 }
@@ -66,9 +94,15 @@ body{
   height: 100%;
   background-color: black;
  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   border-radius: 10px;
   font-size: 70%;
@@ -78,9 +112,16 @@ body{
     position: absolute;
     top: 90px;
     width: 85%;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 40px;
 
 }
@@ -92,18 +133,31 @@ body{
     min-height: 50px;
     max-height: 100px;
     height:auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 10px;
     color: #ffffff;
     list-style: none;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     overflow-wrap: break-word;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 10px black;
+    -webkit-box-shadow: 5px 5px 10px black;
+            box-shadow: 5px 5px 10px black;
     padding: 2px 2px 2px 0px;
+    -webkit-transition: 0.9s;
+    -o-transition: 0.9s;
     transition: 0.9s;
     font-weight: 700;
     position: relative;
@@ -119,6 +173,8 @@ body{
     padding: 20px;
     width: 75%;
     font-size: 80%;
+    -webkit-transition: 0.5s ;
+    -o-transition: 0.5s ;
     transition: 0.5s ;
 
     
@@ -130,7 +186,8 @@ body{
     font-weight: 800;
     margin-left: 5px;
     border: none;
-    box-shadow: 5px 3px 10px black;
+    -webkit-box-shadow: 5px 3px 10px black;
+            box-shadow: 5px 3px 10px black;
     color: #ffffff;
     cursor: pointer;
 
@@ -140,12 +197,24 @@ body{
     top: 170px;
     width: 100%;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
     
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    
+    -webkit-box-direction: normal;
+    
+        -ms-flex-direction: column;
+    
+            flex-direction: column;
 }
 .input:hover{
-    box-shadow: 5px 5px 10px black,
+    -webkit-box-shadow: 5px 5px 10px black,
+    inset -2px 2px white;
+            box-shadow: 5px 5px 10px black,
     inset -2px 2px white;
 }
 .plus{
@@ -154,9 +223,15 @@ body{
     background-color: #e26f17;
    
    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 30px;
     font-weight: 500;
     border-radius: 50%;
@@ -166,6 +241,8 @@ body{
     z-index: 1;
     bottom: 20%;
     right: 13%;
+    -webkit-transition: 1.4s;
+    -o-transition: 1.4s;
     transition: 1.4s;
 
 
@@ -174,11 +251,22 @@ body{
     background-color: #000000;
   height: 35px;
   width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   
-  justify-content: center;
-align-items: center;
+  -webkit-box-pack: center;
+  
+      -ms-flex-pack: center;
+  
+          justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 margin-top: 24px;
   border-radius: 10px;
 
@@ -191,10 +279,14 @@ margin-top: 24px;
     width: 23px;
     border-radius: 6px;
     position: absolute;
-     appearance: none;
+     -webkit-appearance: none;
+        -moz-appearance: none;
+             appearance: none;
      left: 5%;
    cursor: pointer;
     border: 3px solid #00d4c9;
+   -webkit-transition: 0.1s;
+   -o-transition: 0.1s;
    transition: 0.1s;
    background-color: #ea1c1c25;
    
@@ -211,18 +303,29 @@ margin-top: 24px;
     top: -19px;
     left: -14px;
     border-radius: 2px;
-    transform: translate(50%,50%);
+    -webkit-transform: translate(50%,50%);
+        -ms-transform: translate(50%,50%);
+            transform: translate(50%,50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: bold;
    
 }
 
 
 .liremove{
-       transform: translate(150%,0);
+       -webkit-transform: translate(150%,0);
+           -ms-transform: translate(150%,0);
+               transform: translate(150%,0);
        opacity: 0;
     
        
@@ -236,7 +339,8 @@ margin-top: 24px;
 }
 p{  
     width: 80%;
-    text-overflow: clip;
+    -o-text-overflow: clip;
+       text-overflow: clip;
     font-size: 14px;
     overflow-y: scroll;
     position: relative;
@@ -253,22 +357,30 @@ height: 80vh;
 
 position: absolute;
 top: 18; 
-transform: translate(110%,0);
+-webkit-transform: translate(110%,0); 
+    -ms-transform: translate(110%,0); 
+        transform: translate(110%,0);
 /* transition: 0.3s;
 border-radius: 20px;
 display: flex;
 justify-content: center;
 align-items: center; */
+-webkit-transition: 0.6s;
+-o-transition: 0.6s;
 transition: 0.6s;
 
 
 }
 .show{
-    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+            transform: translate(0,0);
 
 }
 .plushide{
     display: none;
+    -webkit-transition: 1.6s;
+    -o-transition: 1.6s;
     transition: 1.6s;
 }
 .input-advance{
@@ -284,7 +396,8 @@ transition: 0.6s;
     color: #ffffff;
     font-size: 15px;
     padding: 12px 10px 0px 14px;
-    filter: drop-shadow(10px,5px 10px black);
+    -webkit-filter: drop-shadow(10px,5px 10px black);
+            filter: drop-shadow(10px,5px 10px black);
 
 
 
@@ -295,10 +408,20 @@ transition: 0.6s;
     background-color: #0bf1e609;
     position: absolute;
     top: 240px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    
+    -webkit-box-direction: normal;
+    
+        -ms-flex-direction: row;
+    
+            flex-direction: row;
 }
 .wrap2{
     height: auto;
@@ -306,10 +429,17 @@ transition: 0.6s;
     background-color: #0bf1e609;
     position: absolute;
     top: 240px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     top: 340px;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 .lebel{
     color: rgb(113, 109, 109);
@@ -323,10 +453,19 @@ transition: 0.6s;
    
     position: absolute;
 
+    display:-webkit-box;
+
+    display:-ms-flexbox;
+
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 22px;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 
 }
 .timewraper{
@@ -334,8 +473,14 @@ transition: 0.6s;
     background-color: #00d4c900;
     position: absolute;
     
+    display:-webkit-box;
+    
+    display:-ms-flexbox;
+    
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 22px;
 
 
@@ -364,8 +509,13 @@ option{
     height: 370px;
     z-index: -1;
     position: fixed;
-    justify-self: center;
-    align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 1.1%;
     opacity: 0.3;
@@ -378,9 +528,14 @@ option{
     width: 95%;
     position: absolute;
     top: 390px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: baseline;
-    align-content: baseline;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    -ms-flex-line-pack: baseline;
+        align-content: baseline;
     color: #ffffff;
 
 
@@ -411,7 +566,8 @@ option{
   /* in here i wrote all off clas which is never exist on main html. 
   Javascript will make all off this by the user order */
 .date{ color: #dcfbf6;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     position: absolute;
     right: 17%;
     font-size: 7px; /* 7 */
@@ -419,14 +575,17 @@ option{
      bottom: 5%;
      padding: 3px;
      border-radius: 5px;
-    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+            backdrop-filter: blur(70px);
     font-weight: 900;
-    filter: drop-shadow(1px 1px 4px #00ccff);
+    -webkit-filter: drop-shadow(1px 1px 4px #00ccff);
+            filter: drop-shadow(1px 1px 4px #00ccff);
     
 }
 .time{
     color: #c5fac8;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     position: absolute;
     right: 3%;
     font-size: 7px;
@@ -434,9 +593,11 @@ option{
      bottom: 5%;
      padding: 3px;
      border-radius: 5px;
-    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+            backdrop-filter: blur(70px);
     font-weight: 900;
-    filter: drop-shadow(1px 1px 4px #00ccff);
+    -webkit-filter: drop-shadow(1px 1px 4px #00ccff);
+            filter: drop-shadow(1px 1px 4px #00ccff);
 }
 /* unreal elements end */
 .dbtn{
@@ -454,7 +615,9 @@ option{
 
 
 .hidemain{
-    transform: translate(-130%,0%);
+    -webkit-transform: translate(-130%,0%);
+        -ms-transform: translate(-130%,0%);
+            transform: translate(-130%,0%);
 }
 .over{
     background-color: #f5546f45;
@@ -464,11 +627,19 @@ option{
     height: 100vh;
     width: 100vw;
     background-color: #48e7bd90;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 20px;
-    align-items: center;
-    backdrop-filter: blur(300px);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-backdrop-filter: blur(300px);
+            backdrop-filter: blur(300px);
     display: none;
     position: relative;
     
@@ -496,8 +667,11 @@ option{
     .responsive{
        
           display: block;
-          align-items: center;
-          align-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -ms-flex-line-pack: center;
+              align-content: center;
     }
     
     
@@ -508,5 +682,4 @@ option{
         display: none;
     }
 }
-
 
