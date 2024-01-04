@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', initialize);
 
-function initialize() {
     // DOM elements 
     const inputTask = document.querySelector('input');
     const addButton = document.querySelector('.add');
@@ -18,9 +16,7 @@ function initialize() {
     const mainSection = document.getElementById('main');
     const backButton = document.querySelector(`.backbtn`);
     inputyear.innerHTML += `<option value="${ new Date().getFullYear()}" >${new Date().getFullYear()}</option>`;
-    inputyear.innerHTML += `<option value="${ new Date().getFullYear()+1}" >${new Date().getFullYear()+1}</option>`
 
-    
     
     // Options for date and time formatting
     const options = {
@@ -119,13 +115,13 @@ function initialize() {
                 let month = getTime().month <= 9 ?`0`+ getTime().month: getTime().month
                 let year = getTime().year
                 let fulldate = `${date}/${month}/${year}`
-           
+                
                 if (taskTime  == etime && esecond == `00` && taskdate == fulldate) {
                     new Notification(task.querySelector('p').innerHTML);
                     
                   }
                 
-         else if (taskdate == fulldate && taskTime < etime && task.childNodes.length == 11 ){
+         else if (taskdate == fulldate && taskTime < etime && task.childNodes.length > 9 ){
             task.classList.add(`over`)
 
          }
@@ -137,6 +133,8 @@ function initialize() {
           else if ( taskdate < fulldate && taskTime <= etime && task.childNodes.length == 11 ){
             task.classList.add(`over`)
           }
+          
+
      
          })
          }, 500);
@@ -202,7 +200,7 @@ function initialize() {
     }
 
     
-}  // ending
+ // ending
 
 
 
